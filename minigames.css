@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
+body{
+    margin: 0;
+    padding: 0;
+    background-color: rgb(8, 8, 8);
+}
+header{
+    color: whitesmoke;
+text-align: center;
+}
+h1{
+    font-size: 4em;
+    font-family: 'Courier New', Courier, monospace;
+
+}
+.header-text{
+    font-size: 2em;
+    font-family: 'Courier New', Courier, monospace;
+ text-decoration: underline;
+ margin: 25px;
+}
+.container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+  .container > img {
+    position: relative;
+    width: 20em;
+    height: 20em;
+    margin: 0 auto;
+  }
+  .container > button {
+    margin: 2em;
+    padding: 25px;
+    background-color: rgb(237, 76, 92);
+    border: 1px solid white;
+    border-radius: 25px;
+    font-weight: 800;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    width: 20em;
+  }
+  
+  .container > button::before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+  }
+  
+  .container > button::after {
+    content: "";
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    top: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+  }
+  .container > button:hover {
+    background-color: rgb(200, 60, 80);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4);
+  }
+  
+  .container > button:active {
+    transform: translateY(0);
+    box-shadow: none;
+  }
+  .jump{
+    animation: jump 0.5s ease-in-out;
+  }
+  @keyframes jump {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-50px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+.fadeout {
+    opacity: 1;
+    animation-name: fadeout;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+}
+
+@keyframes fadeout {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+  .minigames-container {
+    width: 98%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: whitesmoke;
+    margin-left: calc((100% - 98%) / 2);
+    border-radius: 25px;
+  }
+.games {
+    width: 200px;
+    height: 200px;
+    border: 2px solid lightgray;
+    padding: 25px;
+    margin: 1em;
+    text-align: center;
+    border-radius: 25px;
+    font-weight: 800;
+    font-family: 'Kanit', sans-serif;
+    font-size: 1.2em;
+    transition: all 0.3s ease-in-out; /* Add transition effect */
+  }
+.games:hover {
+    background-color: lightgray; /* Add hover effect */
+    cursor: pointer;
+  }
+  
+.games:active {
+    transform: scale(0.95); /* Add click effect */
+  }
+  .welcome{
+    color: whitesmoke;
+    text-align: center;
+    font-size: 2em;
+font-family: Verdana, Geneva, Tahoma, sans-serif;  
+}
+.choices{
+    border: 1px solid lightgray;
+    width: 300px;
+    height: 300px;
+    margin: 1em;
+    flex-direction: column;
+    display: flex;
+text-align: center;
+font-size: 2em;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+color: whitesmoke;
+border-radius: 25px;
+}
+.choices:hover{
+transition: 1s all;
+background-color: whitesmoke;
+color: black;
+}
+.selectContainer{
+    display: flex;
+    justify-content: center;
+}
+.score{
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    position: absolute;
+    top: 0;
+    font-size: 3em;
+}
+i{
+  font-size: 2em;
+}
+.choiceCPU{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  position: absolute;
+  color: whitesmoke;
+  font-size: 2em;
+}
+.notification{
+  color: white;
+  font-size: 2em;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  width: 200px;
+  height: 200px;
+  border-color: whitesmoke;
+  border-radius: 25px;
+
+
+  position: absolute;
+  display: flex;
+ transform: translateY(20%);
+
+}
